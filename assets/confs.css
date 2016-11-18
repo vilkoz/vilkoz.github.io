@@ -46,11 +46,17 @@ body {
 }
 .cd-header #cd-logo {
 	float: left;
-	margin: 13px 0 0 5%;
+	margin: 8px 0 0 5%;
+	width: 153px;
+}
+#cd-logo img {
+	width: 418px;
+	height: 125px;
 }
 .cd-header #cd-logo img {
 	display: block;
 }
+
 @media only screen and (min-width: 768px) {
 	.cd-header {
 		height: 70px;
@@ -146,14 +152,14 @@ body {
 	}
 	.cd-main-nav li {
 		display: inline-block;
-/*		margin-left: 1em;*/
+		/*		margin-left: 1em;*/
 	}
 	.cd-main-nav a {
 		display: inline-block;
 		height: auto;
 		line-height: normal;
 		background: transparent;
-		padding: .6em 1em;
+		padding: .6em .5em;
 		border-top: none;
 		color: #3d3536;
 		text-transform: uppercase;
@@ -169,12 +175,57 @@ body {
 	}
 }
 .cd-fixed-bg {
-	min-height: 100%;
+	min-height: 60%;
 	background-size: cover;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center center;
 	text-align: center;
+}
+/* HELLO MSG */
+.hello-msg {
+	display: none;
+	position: absolute;
+	top: 50%;
+
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+
+	padding: 2% 3%;
+}
+.table {
+	display: table;
+}
+.td {
+	display: table-cell;
+	width: 44%;
+/*	border: 3px solid black; */
+	min-height: 400px;
+
+	filter: drop-shadow(0 0 5px black);
+}
+.tr {
+	display: table-row;
+	color: #f4e842;
+}
+.separator {
+	width: 2%;
+}
+
+.hello-msg .td.left {
+	font-size: 1.6em;
+
+	line-height: 50%;
+	white-space: nowrap;
+	text-align: right;
+}
+.hello-msg .td.right {
+	text-align: left;
+
+	transform: translateY(-0.5em);
 }
 .cd-fixed-bg h1 {
 	position: absolute;
@@ -183,30 +234,54 @@ body {
 	right: auto;
 	bottom: auto;
 	font-size:36px;
+
 	-webkit-transform: translateX(-50%) translateY(-50%);
 	-moz-transform: translateX(-50%) translateY(-50%);
 	-ms-transform: translateX(-50%) translateY(-50%);
 	-o-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
+
 	text-align: center;
 	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 	color: white;
 }
+/**** END HELLO MSG *****/
+
+.cd-fixed-bg.cd-bg-0:before {
+	display: block;
+	top: 50px;
+	content: "";
+	position: absolute;
+	width : 100%;
+	height: 60%;
+	background: inherit;
+	background-image: url(../img/fix-bg-0.2.svg);
+	z-index: -1;
+
+/*	filter        : blur(10px);
+	-o-filter     : blur(10px);
+	-moz-filter   : blur(10px);
+	-webkit-filter: blur(10px); */
+
+	transition        : all 2s linear;
+	-o-transition     : all 2s linear;
+	-moz-transition   : all 2s linear;
+	-webkit-transition: all 2s linear;
+}
 .cd-fixed-bg.cd-bg-0 {
-	background-image: url(../img/fix-bg-0.jpg);
 }
 .cd-fixed-bg.cd-bg-1 {
-	background-image: url(../img/fix-bg-1.jpg);
+	background-image: url(../img/fix-bg-1.1.jpg);
 }
 .cd-fixed-bg.cd-bg-2 {
-	background-image: url(../img/fix-bg-2.jpg);
+	background-image: url(../img/fix-bg-2.1.jpg);
 }
 .cd-fixed-bg.cd-bg-3 {
-	background-image: url(../img/fix-bg-3.jpg);
+	background-image: url(../img/fix-bg-3.1.jpg);
 }
 .cd-fixed-bg.cd-bg-4 {
-	background-image: url(../img/fix-bg-4.jpg);
-}
+	background-image: url(../img/fix-bg-4.2.svg);
+ }
 
 .cd-scrolling-bg {
 	min-height: 100%;
@@ -220,31 +295,30 @@ body {
 }
 
 .post.bg-0 {
-	background: url(../img/post-bg-1.png) top right no-repeat;
-	background-color: #E2FBF1;
+	background: url(../img/post-bg-4.svg) top right no-repeat;
+	background-color: #E1E7EE;
 }
 .post.bg-1 {
-	background: url(../img/post-bg-1.png) top right no-repeat;
-	background-color: #E2FBF1;
+	background: url(../img/post-bg-4.svg) top right no-repeat;
+	background-color: #E1E7EE;
 }
 .post.bg-2 {
-	background: url(../img/post-bg-1.png) top right no-repeat;
-	background-color: #CCF6E4;
+	background: url(../img/post-bg-3.png) top right no-repeat;
+	background-color: #E1E7EE;
 }
 .post.bg-3 {
-	background: url(../img/post-bg-1.png) top right no-repeat;
-	background-color: #B3EED5;
+	background: url(../img/post-bg-3.png) top right no-repeat;
+	background-color: #E1E7EE;
 }
 .post.bg-4 {
-	background: url(../img/post-bg-1.png) top right no-repeat;
-	background-color: #9BE4C4;
+	background: url(../img/post-bg-4.svg) top right no-repeat;
+	background-color: #E1E7EE;
 }
 .post.bg-0, .post.bg-1, .post.bg-2, .post.bg-3, .post.bg-4 {
 	background-size: cover;
 	background-attachment: scroll;
 	background-repeat: no-repeat;
 	background-position: right;
-	filter: grayscale(60%);
 }
 .post_left {
 	width: 50%;
@@ -269,19 +343,19 @@ body {
 	z-index: 2;
 }
 .triangle.bg-0 {
-	border-top-color: #E2FBF1;
+	border-top-color: #E1E7EE;
 }
 .triangle.bg-1 {
-	border-top-color: #E2FBF1;
+	border-top-color: #E1E7EE;
 }
 .triangle.bg-2 {
-	border-top-color: #CCF6E4;
+	border-top-color: #E1E7EE;
 }
 .triangle.bg-3 {
-	border-top-color: #B3EED5;
+	border-top-color: #E1E7EE;
 }
 .triangle.bg-4 {
-	border-top-color: #9BE4C4;
+	border-top-color: #E1E7EE;
 }
 .tr-shadow {
 	width: 0px;
@@ -289,14 +363,17 @@ body {
 	float: left;
 	position: relative;
 	content: "";
+
 	-webkit-transform: rotate(9deg);
 	-moz-transform: rotate(9deg);
 	-o-transform: rotate(9deg);
 	transform: rotate(6.9deg) translate(-32px, -500px);
+
 	-webkit-box-shadow: 10px 0px 50px 5px rgba(0,0,0,1);
 	-moz-box-shadow: 10px 0px 50px 5px rgba(0,0,0,1);
 	-o-box-shadow: 10px 0px 50px 5px rgba(0,0,0,1);
 	box-shadow: 10px 0px 50px 5px rgba(0,0,0,1);
+
 	z-index: 1;
 }
 /*footer*/
@@ -333,6 +410,18 @@ body {
 /********/
 
 @media only screen and (max-width: 768px) {
+	#cd-logo img {
+		width: 209px;
+		height: 62px;
+
+		-webkit-filter: drop-shadow(0px 0px 1px black);
+		-moz-filter: drop-shadow(0px 0px 1px black);
+		-ms-filter: drop-shadow(0px 0px 1px black);
+		-o-filter: drop-shadow(0px 0px 1px black);
+		filter: drop-shadow(0px 0px 1px black);
+
+		transform: translateY(-5px);
+	}
 	.post {
 		min-height: 100%;
 		height: auto;
@@ -375,5 +464,26 @@ body {
 	}
 	.bottom {
 		bottom: 150px;
+	}
+	.hello-msg {
+		/*top: 50%;*/
+	}
+	.hello-msg .tr {
+		display: block;
+	}
+	.hello-msgi .table {
+		display: block;
+	}
+	.hello-msg .td {
+		display: block;
+		width: 99%;
+		line-height: 1em;
+		min-height: 2em;
+	}
+	.hello-msg .td.left {
+		line-height: 1em;
+	}
+	.hello-msg .separator {
+		display: none;
 	}
 }
